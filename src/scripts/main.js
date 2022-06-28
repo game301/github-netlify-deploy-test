@@ -13,6 +13,6 @@ funButton.addEventListener("click", () => {
     newDiv.appendChild(newContent);
 
     // add the newly created element and its content into the DOM
-    const currentDiv = document.querySelector("#div-test");
-    funButton.insertBefore(newDiv, currentDiv);
+    const currentDiv = document.getElementById("div1");
+    document.body.insertBefore(newDiv, currentDiv);
 });
