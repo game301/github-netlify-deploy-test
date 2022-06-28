@@ -10,9 +10,9 @@ funButton.addEventListener("click", () => {
     const newContent = document.createTextNode("Hi there and greetings!");
 
     // add the text node to the newly created div
-    newDiv.append(newContent);
+    newDiv.appendChild(newContent);
 
     // add the newly created element and its content into the DOM
-    const currentDiv = document.querySelector("#test-div");
+    const currentDiv = document.querySelector("[data-fun]");
     document.body.insertBefore(newDiv, currentDiv);
 });
