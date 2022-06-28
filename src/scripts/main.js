@@ -13,6 +13,6 @@ funButton.addEventListener("click", () => {
     newDiv.appendChild(newContent);
 
     // add the newly created element and its content into the DOM
-    const currentDiv = document.querySelector("[data-fun]");
+    const currentDiv = document.querySelector("#div-test");
     document.body.insertBefore(newDiv, currentDiv);
 });
