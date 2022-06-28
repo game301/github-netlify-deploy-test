@@ -6,7 +6,7 @@ funButton.addEventListener("click", () => {
     const para = document.createElement("p");
     para.innerText = "This is a paragraph";
 
-    const divTest = document.querySelector("div-test");
+    const divTest = document.querySelector("#div-test");
 
     divTest.appendChild(para);
 });
