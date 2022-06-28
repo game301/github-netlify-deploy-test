@@ -13,6 +13,11 @@ div {
     background-color: chocolate;
 }
 
+h2 {
+    color: darkmagenta;
+    background-color: darkolivegreen;
+}
+
 p {
     color: firebrick;
     background-color: aqua;
