@@ -1,4 +1,3 @@
-"use strict";
 const funButton = document.querySelector("[data-fun]");
 
 funButton.addEventListener("click", () => {
