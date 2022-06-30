@@ -1,9 +1,14 @@
 const funButton = document.querySelector("[data-fun]");
 
 funButton.addEventListener("click", () => {
-    console.log("Fun!");
+    console.log("Fun button was clicked!");
 
-    // create paragraph onclick
+    // makes the div-test div empty
+    let divTestDiv = document.querySelector("#div-test");
+    divTestDiv.textContent = "";
+    console.log("div-test div tartalma törölve!");
+
+    // create paragraph (on button click)
     const para = document.createElement("p");
     para.innerText = "This is a paragraph";
 
@@ -11,6 +16,29 @@ funButton.addEventListener("click", () => {
     divTest.appendChild(para);
 
     // fetch data and display with DOM
+    async function getJsonOnclick() {
+        try {
+            const response = await fetch("/src/data/test2.json");
+            console.log("SUCCESS, Response received", response);
+            if (response.ok) {
+                const responseJson = await response.json();
+                console.log("Succesfuly converted into json", responseJson);
+
+                // create div with the fetched response inside (onclick)
+                const divWithTheResponse = document.createElement("div");
+                divWithTheResponse.setAttribute("id", "created-div"); // id beállítás
+
+                divWithTheResponse.innerHTML = responseJson;
+
+                //const divTest = document.querySelector("#div-test");  // Ezt már feljebb létrehoztam
+                divTest.appendChild(divWithTheResponse);
+            }
+        } catch (err) {
+            console.log("Not Succesful", err);
+        }
+    }
+
+    getJsonOnclick();
 });
 /*
 fetch("https://reqres.in/api/users")
@@ -26,9 +54,10 @@ fetch("https://reqres.in/api/users")
     .catch((error) => console.log("ERROR", error));
 */
 
-async function getData() {
+/*
+async function getDataTest1() {
     try {
-        const response = await fetch("https://reqres.in/api/users/23");
+        const response = await fetch("https://reqres.in/api/users");
         console.log("SUCCESS, Response received", response);
         if (response.ok) {
             const resJson = await response.json();
@@ -39,4 +68,22 @@ async function getData() {
     }
 }
 
-getData();
+getDataTest1();
+*/
+
+/*
+async function getDataTest2() {
+    try {
+        const response = await fetch("/src/data/test.json");
+        console.log("SUCCESS, Response received", response);
+        if (response.ok) {
+            const resJson = await response.json();
+            console.log("Succesfuly converted into json", resJson);
+        }
+    } catch (err) {
+        console.log("Not Succesful", err);
+    }
+}
+
+getDataTest2();
+*/

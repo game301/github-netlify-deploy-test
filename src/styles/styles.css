@@ -8,17 +8,25 @@ h6 {
     background-color: aliceblue;
 }
 
-div {
-    color: blueviolet;
-    background-color: chocolate;
-}
-
 h2 {
     color: darkmagenta;
     background-color: darkolivegreen;
 }
 
+h3 {
+    color: turquoise;
+    background-color: yellow;
+    outline: red dotted;
+}
+
+h4 {
+    color: purple;
+    background-color: darkblue;
+    outline: black dotted;
+}
+
 p {
     color: firebrick;
     background-color: aqua;
+    outline: green dotted;
 }
