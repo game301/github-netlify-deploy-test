@@ -1,3 +1,4 @@
+"use strict";
 const funButton = document.querySelector("[data-fun]");
 
 funButton.addEventListener("click", () => {
@@ -19,10 +20,10 @@ funButton.addEventListener("click", () => {
     async function getJsonOnclick() {
         try {
             const response = await fetch("/src/data/test2.json");
-            console.log("SUCCESS, Response received", response);
+            console.log("SUCCESS, Response received! ", response);
             if (response.ok) {
                 const responseJson = await response.json();
-                console.log("Succesfuly converted into json", responseJson);
+                console.log("Succesfuly converted into json! ", responseJson);
 
                 // create div with the fetched response inside (onclick)
                 const divWithTheResponse = document.createElement("div");
