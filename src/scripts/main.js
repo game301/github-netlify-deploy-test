@@ -1,4 +1,3 @@
-"use strict";
 const funButton = document.querySelector("[data-fun]");
 
 funButton.addEventListener("click", () => {
@@ -95,7 +94,6 @@ const themeMap = {
     light: "solar",
     solar: "dark",
 };
-let tmp = "";
 const theme =
     localStorage.getItem("theme") ||
     ((tmp = Object.keys(themeMap)[0]), localStorage.setItem("theme", tmp), tmp);
