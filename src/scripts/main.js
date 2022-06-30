@@ -35,7 +35,7 @@ funButton.addEventListener("click", () => {
                 divTest.appendChild(divWithTheResponse);
             }
         } catch (err) {
-            console.log("Not Succesful", err);
+            console.error("Not Succesful", err);
         }
     };
 
