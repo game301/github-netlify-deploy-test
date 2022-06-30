@@ -17,7 +17,7 @@ funButton.addEventListener("click", () => {
     divTest.appendChild(para);
 
     // fetch data and display with DOM
-    async function getJsonOnclick() {
+    const getJsonOnclick = async () => {
         try {
             const response = await fetch("/src/data/test2.json");
             console.log("SUCCESS, Response received! ", response);
@@ -37,7 +37,7 @@ funButton.addEventListener("click", () => {
         } catch (err) {
             console.log("Not Succesful", err);
         }
-    }
+    };
 
     getJsonOnclick();
 });
